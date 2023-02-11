@@ -16,6 +16,7 @@ public class Transaksi {
     final Double biayaperKm = 4500.0;
     final Double biayaperJam = 45000.0;
 
+    // Constructor
     public Transaksi(String idTaxi, String lokasiAsal, String lokasiTujuan, Double km, Double jam) {
         Double totalbiayaJam = biayaperKm * km;
         Double totalbiayaKm = biayaperJam * jam;
@@ -26,6 +27,8 @@ public class Transaksi {
         this.km = km;
         this.jam = jam;
 
+        // Menentukan total biaya dibayar
+        // Total Biaya diperoleh berdasarkan biaya terbesar
         if (totalbiayaKm > totalbiayaJam)
             this.totalbiayaDibayar = totalbiayaKm;
         else
